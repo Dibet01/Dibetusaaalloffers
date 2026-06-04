@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>USA CPA Rewards | Real Reviews · Live Offers</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2f6 100%);
+      color: #1A2C3E;
+      padding: 1.2rem 1rem 3rem;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* header */
+    .hero {
+      text-align: center;
+      margin-bottom: 1.8rem;
+      padding: 0.5rem 0.2rem;
+    }
+
+    .badge {
+      background: #fff3df;
+      display: inline-block;
+      padding: 0.35rem 1.1rem;
+      border-radius: 60px;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #b8621a;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(2px);
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      background: linear-gradient(115deg, #1F3B4C, #2F6B47);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.65rem;
+    }
+
+    .subhead {
+      font-size: 0.95rem;
+      color: #436078;
+      font-weight: 500;
+      background: rgba(255,255,240,0.7);
+      backdrop-filter: blur(2px);
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      display: inline-block;
+    }
+
+    /* rotating reviews carousel */
+    .reviews-section {
+      background: #FFFFFFDD;
+      backdrop-filter: blur(8px);
+      border-radius: 36px;
+      padding: 1rem 1.2rem;
+      margin: 1.2rem 0 1.8rem 0;
+      box-shadow: 0 12px 24px -12px rgba(0,0,0,0.1);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #2b4f6c;
+      margin-bottom: 12px;
+      letter-spacing: -0.2px;
+    }
+
+    .review-stars {
+      color: #f5b042;
+      letter-spacing: 2px;
+    }
+
+    .review-text {
+      font-size: 0.95rem;
+      line-height: 1.45;
+      color: #1f2f3a;
+      font-weight: 500;
+      margin-bottom: 12px;
+      padding-right: 8px;
+    }
+
+    .review-author {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: #5c728b;
+      border-top: 1px dashed #dee4ec;
+      padding-top: 10px;
+    }
+
+    .review-autor-name {
+      font-weight: 700;
+      color: #2c6e4f;
+    }
+
+    .review-change-note {
+      font-size: 0.7rem;
+      text-align: right;
+      color: #b89a3c;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    /* offer card with custom logos */
+    .section-title {
+      font-weight: 800;
+      font-size: 1.35rem;
+      margin: 1.8rem 0 1rem 0;
+      padding-left: 0.5rem;
+      border-left: 5px solid #E2B13B;
+    }
+
+    .offer-card {
+      background: #ffffff;
+      border-radius: 28px;
+      margin-bottom: 1rem;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 12px 22px -10px rgba(0, 0, 0, 0.06);
+      transition: all 0.2s ease;
+      border: 1px solid #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .offer-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 28px -12px rgba(0, 0, 0, 0.12);
+      border-color: #ffe1aa;
+    }
+
+    .offer-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 2;
+      min-width: 170px;
+    }
+
+    /* custom logo area - unique per brand */
+    .custom-logo {
+      width: 56px;
+      height: 56px;
+      background: #F7F3EC;
+      border-radius: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      font-weight: 700;
+      box-shadow: inset 0 0 0 1px rgba(255,255,240,0.8), 0 5px 12px rgba(0,0,0,0.02);
+      transition: all 0.2s;
+    }
+
+    .offer-text {
+      flex: 1;
+    }
+
+    .offer-title {
+      font-weight: 800;
+      font-size: 1.15rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+
+    .brand-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: #eef3fc;
+      padding: 0.2rem 0.7rem;
+      border-radius: 40px;
+      color: #1f6392;
+    }
+
+    .prize-value {
+      background: #FEF1E0;
+      padding: 0.2rem 0.7rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: #c47c2e;
+    }
+
+    .desc-tag {
+      font-size: 0.75rem;
+      color: #5e748b;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .cpl-badge {
+      background: #e3f2e9;
+      color: #1f6e43;
+      border-radius: 50px;
+      padding: 0.15rem 0.6rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    .btn-claim {
+      background: linear-gradient(100deg, #1F3B4C, #265f4b);
+      border: none;
+      padding: 0.7rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      font-family: inherit;
+    }
+
+    .btn-claim i {
+      transition: transform 0.15s;
+    }
+
+    .btn-claim:active {
+      transform: scale(0.96);
+    }
+
+    @media (max-width: 550px) {
+      .offer-card {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-claim {
+        justify-content: center;
+        width: 100%;
+      }
+      .custom-logo {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+
+    .disclaimer {
+      background: #FFF6E6;
+      border-radius: 24px;
+      padding: 0.8rem;
+      margin-top: 2rem;
+      font-size: 0.7rem;
+      text-align: center;
+      color: #a1732c;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.7rem;
+      margin-top: 1.5rem;
+      color: #7890aa;
+    }
+
+    @keyframes fadeSlide {
+      0% { opacity: 0; transform: translateY(6px);}
+      100% { opacity: 1; transform: translateY(0px);}
+    }
+
+    .review-card-anim {
+      animation: fadeSlide 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <div class="hero">
+    <div class="badge"><i class="fas fa-map-marker-alt"></i> USA · LIVE CPA OFFERS</div>
+    <h1>Win <span style="color:#E2B13B;">Real Cash & Prizes</span> <br>Trusted by 10,000+ Members</h1>
+    <div class="subhead"><i class="fas fa-chart-simple"></i> Fresh rewards · Instant claim</div>
+  </div>
+
+  <!-- DYNAMIC REAL REVIEW SECTION (always changing) -->
+  <div class="reviews-section" id="reviewBox">
+    <div class="review-header">
+      <i class="fas fa-comment-dots" style="color:#D4AF37;"></i> <span>⭐ Real-time member reviews</span> <i class="fas fa-sync-alt" style="font-size: 0.7rem; opacity:0.7;"></i>
+    </div>
+    <div id="reviewContent">
+      <!-- dynamic review will be injected here -->
+    </div>
+    <div class="review-change-note">
+      <i class="fas fa-clock"></i> Reviews update automatically — fresh voices, real experiences
+    </div>
+  </div>
+
+  <!-- OFFERS WITH OWN REAL LOGOS (distinct brand icons) -->
+  <div class="section-title">
+    <i class="fas fa-gift"></i> Today's Hot Offers
+  </div>
+
+  <!-- helper: we will generate cards manually but with unique logo icon per brand, matching each offer -->
+  <!-- Each offer includes unique custom logo based on brand + real URL -->
+  
+  <div id="offersContainer">
+    <!-- all 11 offers will be injected via JS to maintain consistency and unique logos but we also can static for reliability, however we will generate in JS to keep flexibility  -->
+  </div>
+
+  <div class="disclaimer">
+    <i class="fas fa-shield-heart"></i> CPA verified network · 18+ USA only. Real rewards upon completion. Always updated.
+  </div>
+  <footer>
+    © 2025 USA CPA Rewards Hub — Real reviews, real offers.
+  </footer>
+</div>
+
+<script>
+  // ---- LIST OF OFFERS (exactly with original links and own logos mapping)
+  const offers = [
+    { name: "UpLevelRewards", brand: "UpLevel", value: "$1,000 Cash Deposit", desc: "Direct Deposit Offer", logoIcon: "💰", logoType: "cash", url: "https://www.af9m8trk.com/KWP116HZ/4K1123XK/?s1=Dibet" },
+    { name: "My American Prizes", brand: "Amazon", value: "$1,000 Gift Card", desc: "Amazon voucher", logoIcon: "📦", logoType: "amazon", url: "https://www.af9m8trk.com/KWP116HZ/TJ2123FW/?s1=Dibet" },
+    { name: "RewardZinga", brand: "CashApp", value: "$1,000", desc: "Instant CashApp transfer", logoIcon: "💵", logoType: "cashapp", url: "https://www.af9m8trk.com/KWP116HZ/9PC123FX/?s1=Dibet" },
+    { name: "OkWow", brand: "Walmart", value: "$1,000", desc: "Walmart shopping card", logoIcon: "🛒", logoType: "walmart", url: "https://www.af9m8trk.com/KWP116HZ/T6M12294/?s1=Dibet" },
+    { name: "OkWow", brand: "Family Dollar", value: "$500", desc: "Family Dollar gift", logoIcon: "🏪", logoType: "familydollar", url: "https://www.af9m8trk.com/KWP116HZ/TTR12295/?s1=Dibet" },
+    { name: "OkWow", brand: "American Eagle", value: "$100", desc: "Clothing & style", logoIcon: "👖", logoType: "americaneagle", url: "https://www.af9m8trk.com/KWP116HZ/MJP12296/?s1=Dibet" },
+    { name: "OkWow", brand: "Netflix", value: "$100", desc: "Streaming subscription", logoIcon: "🎬", logoType: "netflix", url: "https://www.af9m8trk.com/KWP116HZ/KDQ122LY/?s1=Dibet" },
+    { name: "OkWow", brand: "Royal Cruise", value: "$100", desc: "Cruise voucher", logoIcon: "🚢", logoType: "cruise", url: "https://www.af9m8trk.com/KWP116HZ/R98122L2/?s1=Dibet" },
+    { name: "OkWow", brand: "Aldi", value: "$100", desc: "Grocery haul", logoIcon: "🥑", logoType: "aldi", url: "https://www.af9m8trk.com/KWP116HZ/GDZ122L3/?s1=Dibet" },
+    { name: "OkWow", brand: "CashApp", value: "$650", desc: "Fast cash reward", logoIcon: "⚡", logoType: "cashapp2", url: "https://www.af9m8trk.com/KWP116HZ/3AF122KW/?s1=Dibet" },
+    { name: "OkWow", brand: "CashApp", value: "$850", desc: "High-value bonus", logoIcon: "💎", logoType: "cashapp3", url: "https://www.af9m8trk.com/KWP116HZ/5JY122KX/?s1=Dibet" }
+  ];
+
+  // Real rotating reviews dataset (always changing)
+  const reviewsPool = [
+    { name: "Tasha M. ★★★★★", text: "Just received my $500 Walmart card after a quick survey! Legit and fast. ⭐⭐⭐⭐⭐", location: "Texas, USA" },
+    { name: "Darren L. ★★★★★", text: "The CashApp $850 reward worked perfectly. Credited within hours. Highly recommend these CPA offers!", location: "Florida" },
+    { name: "Jessica R. ★★★★☆", text: "Claimed the Amazon $1k prize last week, got my code via email. Real deal - will use again.", location: "New York" },
+    { name: "Marcus T. ★★★★★", text: "Netflix $100 reward — whoa! actually legit, support responsive. Making me a believer.", location: "California" },
+    { name: "Sophia K. ★★★★★", text: "UpLevelRewards $1000 cash deposit showed pending within a day. Unbelievable but true!", location: "Illinois" },
+    { name: "Liam W. ★★★★☆", text: "Family Dollar $500 gift card came in clutch for groceries. No hidden fees. Great experience", location: "Ohio" },
+    { name: "Olivia C. ★★★★★", text: "CashApp $650 loaded instantly. Second time claiming from OkWow, they deliver.", location: "Arizona" },
+    { name: "Ethan J. ★★★★★", text: "Royal cruise voucher is legit — planning my vacation! Trust these CPA links 100%", location: "Nevada" }
+  ];
+
+  let reviewInterval;
+  let currentReviewIndex = 0;
+
+  function displayReview(index) {
+    const review = reviewsPool[index % reviewsPool.length];
+    const reviewHtml = `
+      <div class="review-text review-card-anim">
+        <div class="review-stars">${getStarRating(5)}</div>
+        “${review.text}”
+      </div>
+      <div class="review-author">
+        <span class="review-autor-name"><i class="fas fa-user-check"></i> ${review.name}</span>
+        <span><i class="fas fa-map-pin"></i> ${review.location}</span>
+      </div>
+    `;
+    const reviewContainer = document.getElementById('reviewContent');
+    if (reviewContainer) {
+      reviewContainer.innerHTML = reviewHtml;
+    }
+  }
+
+  function getStarRating(rating) {
+    let stars = '';
+    for (let i=0; i<5; i++) stars += '<i class="fas fa-star"></i>';
+    return stars;
+  }
+
+  function rotateReview() {
+    currentReviewIndex = (currentReviewIndex + 1) % reviewsPool.length;
+    displayReview(currentReviewIndex);
+  }
+
+  // start rotating review every 9 seconds (always changing)
+  if (document.getElementById('reviewContent')) {
+    currentReviewIndex = Math.floor(Math.random() * reviewsPool.length);
+    displayReview(currentReviewIndex);
+    reviewInterval = setInterval(rotateReview, 8500);
+  }
+
+  // Render offer cards with unique logos (each brand gets own distinct look)
+  function renderOffers() {
+    const container = document.getElementById('offersContainer');
+    if (!container) return;
+    container.innerHTML = '';
+    offers.forEach(offer => {
+      // custom logo background color based on brand uniqueness
+      let brandColor = '#F4EFE6';
+      let iconHtml = '';
+      // Use different emoji/icon style per brand to simulate real logo
+      if (offer.brand === 'Amazon') iconHtml = '<i class="fab fa-amazon" style="color:#FF9900;"></i>';
+      else if (offer.brand === 'CashApp') iconHtml = '<i class="fab fa-cashapp" style="color:#00D632;"></i>';
+      else if (offer.brand === 'Walmart') iconHtml = '<i class="fas fa-store" style="color:#0071ce;"></i>';
+      else if (offer.brand === 'Netflix') iconHtml = '<i class="fab fa-netflix" style="color:#E50914;"></i>';
+      else if (offer.brand === 'Family Dollar') iconHtml = '<i class="fas fa-dollar-sign" style="color:#2c7a4d;"></i>';
+      else if (offer.brand === 'American Eagle') iconHtml = '<i class="fas fa-tshirt" style="color:#4a6b8f;"></i>';
+      else if (offer.brand === 'Royal Cruise') iconHtml = '<i class="fas fa-ship" style="color:#2c699a;"></i>';
+      else if (offer.brand === 'Aldi') iconHtml = '<i class="fas fa-shopping-basket" style="color:#E55B13;"></i>';
+      else if (offer.name === 'UpLevelRewards') iconHtml = '<i class="fas fa-rocket" style="color:#CF9F2E;"></i>';
+      else if (offer.name === 'RewardZinga') iconHtml = '<i class="fas fa-gem" style="color:#9b6a3c;"></i>';
+      else iconHtml = `<span style="font-size:1.8rem;">${offer.logoIcon}</span>`;
+      
+      // special for OkWow variants but still unique context
+      const cardDiv = document.createElement('div');
+      cardDiv.className = 'offer-card';
+      cardDiv.setAttribute('data-url', offer.url);
+      
+      cardDiv.innerHTML = `
+        <div class="offer-info">
+          <div class="custom-logo" style="background: #FEF5E8; color:#815e2c;">
+            ${iconHtml || '<i class="fas fa-trophy"></i>'}
+          </div>
+          <div class="offer-text">
+            <div class="offer-title">
+              ${offer.name} <span class="brand-name">${offer.brand}</span>
+              <span class="prize-value">${offer.value}</span>
+            </div>
+            <div class="desc-tag">
+              <span><i class="fas fa-gift"></i> ${offer.desc}</span>
+              <span class="cpl-badge"><i class="fas fa-flag-usa"></i> CPL (US)</span>
+            </div>
+          </div>
+        </div>
+        <button class="btn-claim claim-btn">Claim Now <i class="fas fa-arrow-right"></i></button>
+      `;
+      container.appendChild(cardDiv);
+    });
+
+    // attach event listeners to newly created claim buttons
+    document.querySelectorAll('.claim-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const card = this.closest('.offer-card');
+        if (card && card.dataset.url) {
+          window.open(card.dataset.url, '_blank', 'noopener,noreferrer');
+        } else {
+          // fallback if not found (should not happen)
+          console.warn("URL missing");
+        }
+      });
+    });
+  }
+
+  renderOffers();
+
+  // helper: if any external dynamic review changes we also keep interval clean
+  window.addEventListener('beforeunload', () => {
+    if (reviewInterval) clearInterval(reviewInterval);
+  });
+</script>
+</body>
+</html>
